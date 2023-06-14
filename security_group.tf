@@ -1,6 +1,6 @@
 # Create a Security Group -----------------------------------------------------
 resource "aws_security_group" "allow_http" {
-  name        = "allow-http"
+  name        = var.securitygroup_allowhttp_name
   description = "Allow HTTP inbound traffic"
   vpc_id      = aws_vpc.my_vpc_01.id
 
@@ -27,7 +27,7 @@ resource "aws_security_group" "allow_http" {
 
 # Create a Security Group -----------------------------------------------------
 resource "aws_security_group" "allow_sec1" {
-  name        = "allow-sec1"
+  name        = var.securitygroup_allowsec_name
   description = "Allow HTTP inbound traffic to load"
   vpc_id      = aws_vpc.my_vpc_01.id
 

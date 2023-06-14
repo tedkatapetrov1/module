@@ -62,3 +62,11 @@ variable "lb_name" {
 variable "lbtargetgroup_name" {
   type    = string
 }
+
+variable "securitygroup_allowhttp_name" {
+  type = string
+}
+
+variable "securitygroup_allowsec_name" {
+  type = string
+}
