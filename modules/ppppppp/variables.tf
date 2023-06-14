@@ -74,7 +74,3 @@ variable "securitygroup_allowhttp_name" {
 variable "securitygroup_allowsec_name" {
   type = string
 }
-
-variable "vpc_id" {
-  type = string
-}
