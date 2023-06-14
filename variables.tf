@@ -14,6 +14,7 @@ variable "cidr_ranges" {
   }
 }
 
+
 variable "allow_traffic_cidr_block" {
   type    = string
   default = "0.0.0.0/0"
