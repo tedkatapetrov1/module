@@ -36,7 +36,7 @@ resource "aws_autoscaling_group" "my_autoscaling_group" {
   }
   tag {
     key = "Name"
-    value = "my-exam-autoscaled-instances"
+    value = var.vpc_name
     propagate_at_launch = true
   }
 }
@@ -44,7 +44,7 @@ resource "aws_autoscaling_group" "my_autoscaling_group" {
 # Create Auto Scale Policy ----------------------------------------------------
 
 resource "aws_autoscaling_policy" "my_autoscaling_policy" {
-  name                   = "my-autoscaling-policy"
+  name                   = var.autoscalinggroup_name
   scaling_adjustment     = 1
   adjustment_type        = "ChangeInCapacity"
   cooldown               = 60
@@ -53,7 +53,7 @@ resource "aws_autoscaling_policy" "my_autoscaling_policy" {
 
 # Cloudwatch config -----------------------------------------------------------
 resource "aws_cloudwatch_metric_alarm" "my_cloudwatch_metric" {
-  alarm_name          = "my-cloudwatch-metric"
+  alarm_name          = var.cloudwatch_name
   comparison_operator = "GreaterThanOrEqualToThreshold"
   evaluation_periods  = 1
   metric_name         = "CPUUtilization"

@@ -42,3 +42,15 @@ variable "vpc_cidr" {
   type        = string
   default     = "172.16.0.0/16"
 }
+
+variable "vpc_name" {
+  type    = string
+}
+
+variable "autoscalinggroup_name" {
+  type    = string
+}
+
+variable "cloudwatch_name" {
+  type    = string
+}
