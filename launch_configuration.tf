@@ -24,7 +24,7 @@ resource "aws_launch_template" "my_launch_template" {
 
 # Create a ASG ----------------------------------------------------------------
 resource "aws_autoscaling_group" "my_autoscaling_group" {
-  name = "my-exam-autoscaling-group"
+  name = var.autoscalingpgroup_name
   desired_capacity    = 2
   max_size            = 4
   min_size            = 2
@@ -44,7 +44,7 @@ resource "aws_autoscaling_group" "my_autoscaling_group" {
 # Create Auto Scale Policy ----------------------------------------------------
 
 resource "aws_autoscaling_policy" "my_autoscaling_policy" {
-  name                   = var.autoscalinggroup_name
+  name                   = var.autoscalingpolicy_name
   scaling_adjustment     = 1
   adjustment_type        = "ChangeInCapacity"
   cooldown               = 60

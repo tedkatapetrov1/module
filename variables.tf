@@ -47,7 +47,11 @@ variable "vpc_name" {
   type    = string
 }
 
-variable "autoscalinggroup_name" {
+variable "autoscalingpgroup_name" {
+  type    = string
+}
+
+variable "autoscalingpolicy_name" {
   type    = string
 }
 
