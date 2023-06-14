@@ -35,3 +35,9 @@ variable "regions" {
 variable "policy_arn" {
   default = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
 }
+
+variable "vpc_cidr" {
+  description = "CIDR block for VPC"
+  type        = string
+  default     = "172.16.0.0/16"
+}
