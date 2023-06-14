@@ -54,3 +54,11 @@ variable "autoscalinggroup_name" {
 variable "cloudwatch_name" {
   type    = string
 }
+
+variable "lb_name" {
+  type    = string
+}
+
+variable "lbtargetgroup_name" {
+  type    = string
+}
